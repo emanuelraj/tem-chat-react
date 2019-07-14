@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../logo.svg';
 import ChatBar from '../../components/Component.ChatBar/component.chatbar';
-import '../../App.css';
+import '../../App.scss';
 
 function ChatPage() {
   return (
