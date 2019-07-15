@@ -1,0 +1,28 @@
+@import "../../scss/config.scss";
+
+body {
+  background: $color-brand-primary;
+}
+
+.layout {
+  &--auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    //background: url(/static/background.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    &__content {
+      width: 100%;
+      max-width: 490px;
+    }
+
+    img {
+      width: 150px;
+      margin: 3rem auto;
+      display: block;
+    }
+  }
+}

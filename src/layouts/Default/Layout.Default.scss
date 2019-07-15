@@ -1,0 +1,41 @@
+@import "../../scss/config.scss";
+
+.layout {
+  &--default {
+    background: #FAFAFA;
+    min-height: 100vh;
+    display: flex;
+
+    main {
+      display: block;
+      position: relative;
+      left: 0;
+      width: 100%;
+      transition: all 0.5s ease-in;
+
+      @include breakpoint('m') {
+        width: calc(100vw - #{$sidebar-width});
+        left: $sidebar-width;
+      }
+    }
+
+    &__content {
+      max-width: 770px;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+      padding: 0 1rem;
+
+      @include breakpoint('m') {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.is-blured {
+  filter: blur(10px);
+  opacity: 0.3;
+}

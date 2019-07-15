@@ -1,0 +1,31 @@
+@function type-scale($map, $level) {
+    @return map-get($map, $level);
+}
+
+@function line-height($level) {
+    @return map-get($line-heights, $level);
+}
+
+@mixin type-setting($level: 1) {
+
+    @each $label, $map in $type-scale {
+        @if $label == small {
+            font-size: type-scale($map, $level);
+            line-height: line-height($level);
+        }
+
+        @if $label == medium {
+            @include breakpoint("m") {
+                font-size: type-scale($map, $level);
+                line-height: line-height($level);
+            }
+        }
+
+        @if $label == large {
+            @include breakpoint("l") {
+                font-size: type-scale($map, $level);
+                line-height: line-height($level);
+            }
+        }
+    }
+}
