@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { HashRouter, Switch, Route} from 'react-router-dom';
-import ChatPage from './pages/chat/index';
+import ChatPage from './pages/chat';
+import Register from './pages/register'
 import { PrivateRoute } from '../src/utils/PrivateRoute';
 
 class App extends React.Component<any, any> {
@@ -11,11 +12,11 @@ class App extends React.Component<any, any> {
 				<Switch>
 					<Route exact 
 						path='/login' 
-						component={ChatPage} 
+						component={Register} 
 					/>
 					<Route exact 
 						path='/register' 
-						component={ChatPage} 
+						component={Register} 
 					/>
 					<PrivateRoute exact 
 						path='/chat' 
