@@ -11,7 +11,7 @@ class App extends React.Component<any, any> {
 			<HashRouter>
 				<Switch>
 					<Route exact 
-						path='/login' 
+						path='/' 
 						component={Register} 
 					/>
 					<Route exact 

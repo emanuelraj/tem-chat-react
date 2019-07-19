@@ -15,7 +15,7 @@ export class LayoutAuth extends React.Component<IProps, any> {
         </head>
         <div className='layout--auth'>
           <div className='layout--auth__content'>
-            <img className='layout--auth__img'/>
+            <p className='layout--auth__brand-name'>Tem Chat</p>
             {this.props.children}
           </div>
         </div>

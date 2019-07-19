@@ -1,0 +1,96 @@
+@import "../../scss/config.scss";
+
+.inputfield {
+  padding: 1rem 1rem 0rem 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  transition: background 0.2s ease;
+
+  &--select {
+    position: relative;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      right: 1.5rem;
+      bottom: 0.5rem;
+      fill: $color-grey-dark;
+    }
+  }
+
+  &--large {
+    input,
+    textarea {
+      @include type-setting(1);
+    }
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $color-grey;
+    box-shadow: none;
+    padding: 5px 0;
+    background: transparent;
+
+    &:read-only {
+      cursor: not-allowed;
+    }
+
+    &:-webkit-autofill {
+      background: transparent;
+    }
+
+    &:focus {
+      border-color: $color-brand-primary;
+      outline: none;
+    }
+  }
+
+  &--focus {
+    background: rgba($color-highlight-secondary, .2);
+  }
+
+  &__label {
+    @include type-setting(-1);
+    font-weight: bold;
+    color: $color-brand-secondary;
+    text-transform: uppercase;
+
+    &--headline {
+      @include type-setting(-1);
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.select {
+  &__dropdown {
+    position: absolute;
+    right: 1rem;
+    left: 1rem;
+  }
+
+  &__value-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.5rem;
+      margin-left: -1rem;
+      margin-right: -1rem;
+
+      &:hover {
+        background: rgba($color-highlight-secondary, .2);
+      }
+    }
+  }
+}

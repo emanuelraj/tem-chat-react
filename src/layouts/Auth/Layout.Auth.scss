@@ -19,10 +19,13 @@ body {
       max-width: 490px;
     }
 
-    img {
+    &__brand-name {
+      @include type-setting(2);
       width: 150px;
       margin: 3rem auto;
       display: block;
+      justify-content: center;
+      color: $color-brand-name;
     }
   }
 }

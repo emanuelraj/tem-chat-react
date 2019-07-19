@@ -1,0 +1,70 @@
+@import '../../scss/config.scss';
+
+.button {
+  border-radius: $global-radius;
+  background: $color-highlight-primary;
+  color: #fff;
+  text-align: center;
+  padding: 7px;
+  text-transform: uppercase;
+  @include type-setting(0);
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  transition: all 0.3s ease-in;
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--large {
+    padding: 13px;
+  }
+
+  &--tiny {
+    padding: 5px 7px;
+  }
+
+  &--danger {
+    background: $color-danger;
+
+    &:hover {
+      background: darken($color-danger, 10);
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: notallowed;
+  }
+
+  &--grey {
+    background: $color-grey;
+    color: $color-grey-dark;
+
+    &:hover {
+      background: darken($color-grey, 10);
+    }
+  }
+
+  &--success {
+    background: $color-success;
+  }
+
+  &--ghost {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: $color-highlight-primary;
+
+    &.button--grey {
+      color: $color-grey-dark;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
